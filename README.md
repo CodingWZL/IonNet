@@ -4,7 +4,7 @@ This software package implements the IonNet that takes compositional information
 The package provides three major functions:
 * Calculate the multimodal descriptors based on chemcial compositions.
 * Train a IonNet model with the entire data (including from scratch training and transfer learning).
-* Generated substituted compounds and optimized the structures with MLPs.
+* Generate substituted compounds and optimized the structures with MLPs.
 * Predict conductivity based on IonNet model.
 <img width="1232" height="524" alt="image" src="https://github.com/user-attachments/assets/7d7ea0f9-83f1-48ca-8ded-715c74f3096c" />
 
