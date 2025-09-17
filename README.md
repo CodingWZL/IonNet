@@ -37,11 +37,9 @@ After you finished using `IonNet`, exit the environment by:
 ## Data
 We provide the datasets in the `data` folder, including three datasets:
 
-(1) Computational data: `Li-IonML-Computations.csv`, which contains 8,950 computational samples for model training.
-
-(2) Experimental data: `LiIonDatabase-Experiments-300K.csv`, which contains 398 experimental samples for transfer learning.
-
-(3) Prediction data: `Li-MP-final.csv`, which 4,583 compounds from Materials Project.
+* Computational data: `Li-IonML-Computations.csv`, which contains 8,950 computational samples for model training.
+* Experimental data: `LiIonDatabase-Experiments-300K.csv`, which contains 398 experimental samples for transfer learning.
+* Prediction data: `Li-MP-final.csv`, which 4,583 compounds from Materials Project.
 
 ## Descriptor
 In this work, three types of representations were used to build the model: meredig, magpis, and megnet. Meredig descriptor is a 120-dimensional vector36, atomic fraction of each of the first 103 elements, in order of atomic number, and 17 statistics of elemental properties: mean atomic weight of constituent elements. Magpie, the materials agnostic platform for informatics and exploration, is a versatile tool designed to streamline the development of the ML models from materials data. Megnet, which represents the non-linear element embeddings generated using the materials graph network.
@@ -52,8 +50,37 @@ We provide the script for calculating the represetations, one can use:
 
 More, the calculated descriptor data is provided in the `descriptor` folder.
 
-(1) Descriptors for computational data: meredig, magpie, and megnet.
+* Descriptors for computational data: meredig, magpie, and megnet.
+* Descriptors for experimental data: meredig, magpie, and megnet.
 
-(2) Descriptors for experimental data: meredig, magpie, and megnet.
+## Model
+We provide the scripts for model training and finu-tuning. During the model training, the data is loaded by `dataload.py`. The training in from scratch mode on the computational data can be implemented by running:
+
+    python train.py # change the computation=True in line 54
+
+The transfer learning training on the experimental data can be implemented by running:
+
+    python fine_tune.py # # change the computation=Flase in line 112
+
+Using the well-trained models in `trained_models`, one can predict the ionic conductivity with the descriptors by using:
+
+    python predict.py
+
+## Substitution
+A script for creating the substituted compounds from the screened Materials Project (`Li-MP-final.csv`) is provided. Two functions, including the single-element substitution and double-element substitution are given:
+
+    python substitute.py
+
+A script for generating possible substituted structures based on the original structure is provided. The structures will be saved as CIF files, and then the MLPs can be used to evaluate the formation energy or to optimize the structures directly.
+
+    python generation.py
+
+## Author contributions
+This software was primarily written by `Dr. Zhilong Wang` who is advised by `Prof. Fengqi You`.
+
+## How to cite
+Please cite the following work if you want to use IonNet:
+
+    Zhilong Wang, Fengqi You*. Submitted (2025). 20/09/2025
 
 
