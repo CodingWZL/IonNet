@@ -37,7 +37,7 @@ After you finished using `IonNet`, exit the environment by:
 ## Data
 We provide the datasets in the `data` folder, including three datasets:
 
-* Computational data: `Li-IonML-Computations.csv`, which contains 8,950 computational samples for model training.
+* Computational data: `Li-IonML-Computations.csv`, which contains 8,750 computational samples for model training.
 * Experimental data: `LiIonDatabase-Experiments-300K.csv`, which contains 398 experimental samples for transfer learning.
 * Prediction data: `Li-MP-final.csv`, which 4,583 compounds from Materials Project.
 
