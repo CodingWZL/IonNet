@@ -81,6 +81,6 @@ This software was primarily written by `Dr. Zhilong Wang` who is advised by `Pro
 ## How to cite
 Please cite the following work if you want to use IonNet:
 
-    Zhilong Wang, Fengqi You*. Submitted (2026).
+    Zhilong Wang, Fengqi You*. Decoding the Chemical Space of Fast-Ion Conductors via a Descriptor-guided Transfer Learning Framework. Science Advances 12, aee4959 (2026). https://doi.org/10.1126/sciadv.aee4959
 
 
